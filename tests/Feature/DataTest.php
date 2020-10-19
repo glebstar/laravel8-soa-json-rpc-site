@@ -37,6 +37,6 @@ class DataTest extends TestCase
     {
         $client = new JsonRpcClient();
         $data = $client->send('getPageById', ['page_uid' => $page_uid]);
-        $this->assertTrue($data['result']['title'] == 'test');
+        $this->assertTrue('test' == $data['result']['title']);
     }
 }
